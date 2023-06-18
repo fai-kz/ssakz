@@ -8,7 +8,7 @@ setup(
     author='FAI',
     author_email='ssakz@fai.kz',
     license='MIT',
-    packages=['ssakz'],
+    py_modules=['ssakz'],
     install_requires=[
         'pyzmq',
     ],
