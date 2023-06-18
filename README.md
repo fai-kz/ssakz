@@ -17,3 +17,5 @@ The API key is available upon registering at ssa.fai.kz
 # where the minimal predicted distance between objects is less than 30 km
 nme = client.get_nme(rhigh=30, since='2023-06-19')
 ```
+## Dependency
+- `pyzmq`
