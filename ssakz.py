@@ -72,4 +72,51 @@ class Client(object):
         self.socket.send_string(json.dumps(request))
         return json.loads(self.socket.recv_string())
 
+    def get_sw_geomag_x(self, since, until=None, rate=None):
+        request = {
+            "type": "sw_geomag_x",
+            "filter": {
+                "since": since,
+                "until": until,
+                "rate": rate
+            }
+        }
+        self.socket.send_string(json.dumps(request))
+        return json.loads(self.socket.recv_string())
+
+    def get_sw_geomag_y(self, since, until=None, rate=None):
+        request = {
+            "type": "sw_geomag_y",
+            "filter": {
+                "since": since,
+                "until": until,
+                "rate": rate
+            }
+        }
+        self.socket.send_string(json.dumps(request))
+        return json.loads(self.socket.recv_string())
+
+    def get_sw_geomag_z(self, since, until=None, rate=None):
+        request = {
+            "type": "sw_geomag_z",
+            "filter": {
+                "since": since,
+                "until": until,
+                "rate": rate
+            }
+        }
+        self.socket.send_string(json.dumps(request))
+        return json.loads(self.socket.recv_string())
+
+    def get_sw_k_index(self, since, until=None, rate=None):
+        request = {
+            "type": "sw_k_index",
+            "filter": {
+                "since": since,
+                "until": until,
+                "rate": rate
+            }
+        }
+        self.socket.send_string(json.dumps(request))
+        return json.loads(self.socket.recv_string())
 
